@@ -35,6 +35,12 @@ class FrontEndDev extends Programmatore {
     }
 
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    let btn = document.querySelector(".container button")
+    btn?.addEventListener("click",calcLavoratore);
+})
+
 let mario = new FrontEndDev(40, 45000, 26, 23);
 console.log("Reddito tasse INps: " + mario.getTasseInps());
 console.log("Reddito tasse Irpef: " + mario.getTasseIrpef());

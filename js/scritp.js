@@ -26,6 +26,10 @@ class FrontEndDev extends Programmatore {
         return (this.redditoAnnuoLordo - this.getTasseInps() - this.getTasseIrpef());
     }
 }
+document.addEventListener("DOMContentLoaded", () => {
+    let btn = document.querySelector(".container button");
+    btn === null || btn === void 0 ? void 0 : btn.addEventListener("click", calcLavoratore);
+});
 let mario = new FrontEndDev(40, 45000, 26, 23);
 console.log("Reddito tasse INps: " + mario.getTasseInps());
 console.log("Reddito tasse Irpef: " + mario.getTasseIrpef());
